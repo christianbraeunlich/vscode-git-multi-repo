@@ -1,11 +1,26 @@
 {
   "name": "git-multi-repo",
   "displayName": "Git Multi Repo",
+  "publisher": "christianbraeunlich",
   "description": "Git Multi Repo extension for Visual Studio Code",
   "version": "0.0.1",
+  "author": {
+		"name": "Christian Bräunlich",
+		"email": "braeunlichchristian@gmail.com",
+		"url": "https://github.com/christianbraeunlich"
+	},
   "engines": {
     "vscode": "^1.82.0"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/christianbraeunlich/vscode-git-multi-repo",
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/christianbraeunlich/vscode-git-multi-repo"
+	},
+  "bugs": {
+		"url": "https://github.com/christianbraeunlich/vscode-git-multi-repo/issues"
+	},
   "categories": [
     "Other"
   ],
