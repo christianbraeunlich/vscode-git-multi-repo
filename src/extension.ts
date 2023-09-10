@@ -1,14 +1,24 @@
 import * as vscode from 'vscode';
+import { createBranch, createCommit } from './git-multi-repo/main';
 
 export function activate(context: vscode.ExtensionContext) {
+	let disposables = [];
+	
+	disposables.push(vscode.commands.registerCommand('git-multi-repo.newBranch', () => {
+		createBranch();
+	}));
 
-	console.log('Congratulations, your extension "git-multi-repo" is now active!');
+	disposables.push(vscode.commands.registerCommand('git-multi-repo.newCommit', () => {
+		createCommit();
+	}));
 
-	let disposable = vscode.commands.registerCommand('git-multi-repo.helloWorld', () => {
-		vscode.window.showInformationMessage('Hello World from Git Multi Repo!');
+	disposables.forEach((disposable) => {
+		context.subscriptions.concat(disposable);
 	});
 
-	context.subscriptions.push(disposable);
+	console.log('Congratulations, your extension "git-multi-repo" is now active!');
 }
 
-export function deactivate() {}
+export function deactivate() {
+	console.log('Your extension "git-multi-repo" is now deactivated!');
+}

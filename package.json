@@ -14,8 +14,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "git-multi-repo.helloWorld",
-        "title": "Hello World"
+        "command": "git-multi-repo.newBranch",
+        "title": "Git Multi Repo: Create and Checkout new Branch"
+      },
+      {
+        "command": "git-multi-repo.newCommit",
+        "title": "Git Multi Repo: Create Commit"
       }
     ]
   },
