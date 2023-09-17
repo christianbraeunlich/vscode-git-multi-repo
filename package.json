@@ -3,7 +3,7 @@
   "displayName": "Git Multi Repo",
   "publisher": "christianbraeunlich",
   "description": "Git Multi Repo extension for Visual Studio Code",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "author": {
 		"name": "Christian Bräunlich",
 		"email": "braeunlichchristian@gmail.com",
