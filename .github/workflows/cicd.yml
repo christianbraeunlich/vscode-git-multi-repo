@@ -27,7 +27,7 @@ jobs:
       - run: /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 & echo "Started xvfb"
         shell: bash
         if: ${{ success() && matrix.os == 'ubuntu-latest' }}
-      - run: yarn install
+      - run: npm install
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -121,4 +121,4 @@ jobs:
           asset_path: ${{ env.VSIX_PATH }}
           asset_name: ${{ env.VSIX_NAME }}
           asset_content_type: application/zip
-      - run: vsce publish -p ${{ secrets.VSCE_TOKEN }} --prerelease
+      - run: vsce publish -p ${{ secrets.ADO_PAT }} --prerelease
