@@ -66,7 +66,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - run: npm install -g vsce
-      - run: vsce package --prerelease
+      - run: vsce package --pre-release
       - run: echo "VSIX_PATH=$(find . -maxdepth 1 -type f -iname "*.vsix" | head -1)" >> $GITHUB_ENV
       - run: echo "VSIX_NAME=$(basename $(find . -maxdepth 1 -type f -iname "*.vsix" | head -1))" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v2
@@ -121,4 +121,4 @@ jobs:
           asset_path: ${{ env.VSIX_PATH }}
           asset_name: ${{ env.VSIX_NAME }}
           asset_content_type: application/zip
-      - run: vsce publish -p ${{ secrets.ADO_PAT }} --prerelease
+      - run: vsce publish -p ${{ secrets.ADO_PAT }} --pre-release
