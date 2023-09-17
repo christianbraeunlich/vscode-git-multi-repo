@@ -33,7 +33,7 @@ jobs:
         id: changelog
         uses: mindsers/changelog-reader-action@v2
         with:
-          version: ${{ steps.package-version.outputs.current-version }}
+          version: Unreleased
           path: ./CHANGELOG.md
       - uses: actions/create-release@v1
         id: create_release
